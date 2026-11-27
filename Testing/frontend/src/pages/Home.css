@@ -1,0 +1,239 @@
+/* Home.css */
+
+.home-wrapper {
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #333333;
+  background-color: #fafcfb; 
+  /* Убираем прокрутку у всего body, чтобы скроллилась только середина */
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Контейнеры */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-footer-container {
+  max-width: 900px; 
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   ФИКСИРОВАННАЯ ШАПКА
+   ========================================= */
+.home-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px; /* Фиксированная высота */
+  background: linear-gradient(90deg, #ffffff 0%, #eef5f3 100%);
+  border-bottom: 1px solid #91bdb2;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.home-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* =========================================
+   СКРОЛЛЯЩАЯСЯ СЕРЕДИНА
+   ========================================= */
+.home-content-scroll {
+  flex: 1;
+  /* Отступы сверху и снизу, чтобы контент не прятался под шапкой и подвалом */
+  margin-top: 85px; 
+  margin-bottom: 70px;
+  overflow-y: auto; /* Включаем прокрутку только здесь */
+  padding: 60px 0;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #91bdb2;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #666666;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.test-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.test-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.test-card.active {
+  border: 2px solid #e26748;
+}
+
+.badge {
+  position: absolute;
+  top: -14px;
+  left: 40px;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.badge-active { background: #e26748; }
+.badge-soon { background: #9ca3af; }
+
+.card-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #91bdb2;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.card-desc {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.btn-start {
+  display: block;
+  text-align: center;
+  background: #e26748;
+  color: white;
+  text-decoration: none;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-start:hover { background: #c85336; }
+
+.btn-disabled {
+  display: block;
+  text-align: center;
+  background: #f3f4f6;
+  color: #9ca3af;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: not-allowed;
+  border: 1px solid #e5e7eb;
+}
+
+/* =========================================
+   ФИКСИРОВАННЫЙ ПОДВАЛ
+   ========================================= */
+.home-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* Фиксированная высота */
+  background: linear-gradient(90deg, #ffffff 0%, #eef5f3 100%);
+  border-top: 1px solid #91bdb2;
+  color: #666;
+  font-size: 13px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.home-footer p { margin: 0; }
+
+.admin-link {
+  color: #91bdb2;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.admin-link:hover { color: #e26748; }
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 32px; }
+  .footer-content { flex-direction: column; gap: 8px; text-align: center; }
+  .home-header { height: 75px; }
+  .home-footer { height: 90px; }
+  .home-content-scroll { margin-top: 75px; margin-bottom: 90px; }
+}

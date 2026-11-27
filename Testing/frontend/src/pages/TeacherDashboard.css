@@ -1,0 +1,206 @@
+.dashboard-wrapper {
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.dash-header {
+  background: white;
+  border-bottom: 1px solid #91bdb2;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.dash-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.dash-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dash-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #91bdb2; /* Цвет заголовков */
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dash-subtitle {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 4px 0 0 0;
+}
+
+.btn-logout {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background: #e5e7eb;
+}
+
+.dash-main {
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+  padding: 0 24px;
+}
+
+.dash-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.btn-refresh {
+  background: #e26748;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-refresh:hover {
+  background: #c85336;
+}
+
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.result-card {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+.student-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 6px 0;
+}
+
+.student-date {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.score-box {
+  text-align: right;
+  background: #fff8f6;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #fae3d9;
+}
+
+.score-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: #e26748;
+}
+
+.score-label {
+  font-size: 11px;
+  color: #e26748;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.essay-box {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.essay-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #91bdb2; /* Цвет заголовков */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.essay-text {
+  font-size: 15px;
+  color: #4b5563;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.answers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.answer-pill {
+  background: #f3f4f6;
+  color: #4b5563;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.answer-pill.empty {
+  color: #9ca3af;
+  font-style: italic;
+  background: #fff;
+  border: 1px dashed #d1d5db;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  border: 1px dashed #d1d5db;
+  color: #6b7280;
+}
